@@ -1,4 +1,4 @@
-let str1= "({}[]({}))";
+let str1= "({} [ ]( {} ))";
 let str2 = "}}";
 
 
@@ -13,7 +13,12 @@ function valid(s) {
         
        else if(s[i] == ')' && top == '(' || s[i] =='}' && top == '{' || s[i] ==']' && top == '['){
             stack.pop();
-        }else return false;
+        }
+        else if(s[i] != ')' && s[i] != '(' && s[i] != '[' && s[i] != ']' && s[i] != '{' && s[i] != '}')
+        {
+            continue;
+        }
+        else return false;
     }
     if(stack.length == 0){
         return true;
