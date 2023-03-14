@@ -23,4 +23,9 @@ let friends = [
        allbooks.push(a)
     }
     }
-    console.log(allbooks)
+    function removeDuplicates(allbooks) {
+        return allbooks.filter((item,index) => allbooks.indexOf(item) === index);
+    }
+ 
+    console.log(removeDuplicates(allbooks));
+    // console.log(allbooks)
