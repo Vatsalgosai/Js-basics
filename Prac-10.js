@@ -20,12 +20,10 @@ let friends = [
    for(let i =0; i<friends.length; i++){
     for(let j = 0;j<friends[i].books.length;j++){
       let a = friends[i].books[j];
+      if(!allbooks.includes(a)){
        allbooks.push(a)
+      }
     }
-    }
-    function removeDuplicates(allbooks) {
-        return allbooks.filter((item,index) => allbooks.indexOf(item) === index);
-    }
- 
-    console.log(removeDuplicates(allbooks));
+  }
+    console.log(allbooks);
     // console.log(allbooks)
